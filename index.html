@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama Matemático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="contenedor">
+
+        <h1> MEMORAMA MATEMÁTICO</h1>
+
+         <p class="descripcion">
+           ☺¡Aprende jugando!☺
+        </p>
+
+        <p class="operaciones">
+            Sumas · Restas · Multiplicaciones · Divisiones
+        </p>
+
+        <h2>Selecciona cómo deseas jugar</h2>
+
+        <h2>Operaciones:</h2>
+<div class="seleccion-operaciones">
+    <button class="suma" data-operacion="suma">➕ Sumas</button>
+    <button class="resta" data-operacion="resta">➖ Restas</button>
+    <button class="multiplicacion" data-operacion="multiplicacion">✖️ Multiplicaciones</button>
+    <button class="division" data-operacion="division">➗ Divisiones</button>
+</div>
+
+<h2>Niveles de dificultad:</h2>
+
+<div class="niveles">
+    <button class="facil" data-nivel="facil">Fácil</button>
+    <button class="medio" data-nivel="medio">Medio</button>
+    <button class="dificil" data-nivel="dificil">Difícil</button>
+</div>
+
+<button id="btn-jugar" disabled>¡Jugar!</button>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

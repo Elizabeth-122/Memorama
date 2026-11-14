@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Milky Matcha";
+    src: url("fuente/Milky Matcha.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("img/fondo cuadros.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: white;
+    width: 90%;
+    max-width: 650px;
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+h1 {
+    font-family: "Milky Matcha", sans-serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+    background: linear-gradient(to bottom, #2f2860, #5f47ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.descripcion {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+/* Texto de las operaciones */
+.operaciones {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Botones de las operaciones */
+.seleccion-operaciones {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.seleccion-operaciones button {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.suma {
+    background-color: #b9edc7;
+    color: #246b39;
+}
+
+.resta {
+    background-color: #f5baba;
+    color: #8b3030;
+}
+
+.multiplicacion {
+    background-color: #cfc2f5;
+    color: #49347e;
+}
+
+.division {
+    background-color: #ffe3a3;
+    color:  #805b12;
+}
+
+h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Botones de dificultad */
+.niveles {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Estilo general de los botones */
+button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.facil {
+    background-color: #b9edc7;
+    color: #246b39;
+}
+
+.medio {
+    background-color: #ffe3a3;
+    color: #805b12;
+}
+
+.dificil {
+    background-color: #f5baba;
+    color: #8b3030;
+}
+
+.btn-personalizado {
+    background-color: #cfc2f5;
+    color: #49347e;
+    margin-top: 25px;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(0.95);
+}
+.seleccionado{
+    outline: 3px solid #333;
+    transform: scale(1.05);
+}
+#btn-jugar{
+    margin-top:25px;
+}

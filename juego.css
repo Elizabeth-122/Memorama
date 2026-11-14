@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "Milky Matcha";
+    src: url("fuente/Milky Matcha.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("img/fondo cuadros2.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 10px;
+}
+
+.contenedor-juego {
+    background-color: white;
+    width: 90%;
+    max-width: 750px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+h1 {
+    font-family: "Milky Matcha", sans-serif;
+    font-size: 32px;
+    color: #5145a5;
+    margin-bottom: 12px;
+}
+
+.descripcion {
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.informacion-juego {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    color: #49347e;
+    font-weight: bold;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.carta {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color:transparent;
+    position: relative;
+}
+
+.carta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.carta .imagen-frente {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contenido-carta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    pointer-events: none;
+}
+
+.carta [hidden] {
+    display: none !important;
+}
+
+.btn-regresar {
+    background-color: #cfc2f5;
+    color: #49347e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-regresar:hover {
+    transform: scale(1.05);
+    filter: brightness(0.95);
+}
+
+@media (max-width: 480px) {
+    .tablero {
+        gap: 6px;
+    }
+
+    .contenedor-juego {
+    background-color: white;
+    width: 95%;
+    max-width: 850px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+    .contenido-carta {
+        font-size: 14px;
+    }
+}
+
+/* Fondo del mensaje de victoria */
+.mensaje-victoria {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+.mensaje-victoria[hidden] {
+    display: none !important;
+}
+
+/* Cuadro del mensaje */
+.contenido-victoria {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.contenido-victoria h2 {
+    color: #5145a5;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contenido-victoria p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.contenido-victoria button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #cfc2f5;
+    color: #49347e;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenido-victoria button:hover {
+    filter: brightness(0.95);
+}
+/* Contenedor del confeti */
+#contenedor-confeti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Cada papelito */
+.confeti {
+    position: absolute;
+    top: -20px;
+    width: 10px;
+    height: 15px;
+    animation: caer 3s linear forwards;
+}
+
+/* Animación de caída */
+@keyframes caer {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(105vh) rotate(720deg);
+        opacity: 0;
+    }
+}

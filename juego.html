@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama Matemático</title>
+    <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+
+    <main class="contenedor-juego">
+
+        <h1>MEMORAMA MATEMÁTICO</h1>
+
+        <p class="descripcion">
+            ¡Encuentra las parejas!
+        </p>
+
+        <div class="informacion-juego">
+            <p>Movimientos: <span id="movimientos">0</span></p>
+            <p>Parejas encontradas: <span id="parejas">0</span></p>
+        </div>
+
+        <div class="tablero" id="tablero">
+
+            <!-- Aquí aparecerán las cartas del memorama -->
+
+        </div>
+
+        <!-- Contenedor del confeti -->
+         <div id="contenedor-confeti"></div>
+        <!-- Mensaje de victoria -->
+         <div id="mensaje-victoria" class="mensaje-victoria" hidden>
+            
+            <div class="contenido-victoria">
+                <h2>¡Felicidades!</h2>
+                <p>¡Encontraste todas las parejas!</p>
+                <p>¡Excelente trabajo!</p>
+                <button id="btn-reiniciar">¡Jugar otra vez!</button>
+                <button id="btn-inicio">Volver al inicio</button>
+            </div>
+        </div>
+        
+
+        <button class="btn-regresar" onclick="location.href='index.html'">
+            ← Volver al inicio
+        </button>
+
+    </main>
+<script src="juego.js"></script>
+</body>
+</html>
